@@ -1,0 +1,20 @@
+<p>main works!</p>
+
+<h2>Types</h2>
+<div *ngFor="let type of types">
+  <h3>{{type.Name}}</h3>
+  <p>{{type.description}}</p>
+  <button (click)="getMonitors(type.Id, type.LegentId)">open</button>
+</div>
+
+<h2>Monitors</h2>
+<div *ngFor="let monitor of monitors">
+  <h3>{{monitor.Name}}</h3>
+  <p>{{monitor.MonitorTypeId}}</p>
+</div>
+
+<h2>Legend</h2>
+<div *ngFor="let tag of currLegent">
+  <h3>{{tag.Label}}</h3>
+  <p>{{tag.Color}}</p>
+</div>
